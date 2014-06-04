@@ -43,6 +43,10 @@ function ChannelAdvisor (options) {
 							return cb(err, null);
 						}
 
+						if (data && data[methodName + 'Result']) {
+							data = data[methodName + 'Result'];
+						}
+
 						return cb(err, data);
 					});
 
