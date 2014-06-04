@@ -1,0 +1,30 @@
+{
+  "name": "channeladvisor",
+  "version": "0.0.0",
+  "description": "API wrapper for ChannelAdvisor's SOAP service",
+  "main": "index.js",
+  "dependencies": {
+    "deepval": "^1.1.3",
+    "soap": "^0.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wankdanker/node-channeladvisor.git"
+  },
+  "keywords": [
+    "channel",
+    "advisor",
+    "api",
+    "wrapper"
+  ],
+  "author": "Dan VerWeire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wankdanker/node-channeladvisor/issues"
+  },
+  "homepage": "https://github.com/wankdanker/node-channeladvisor"
+}
