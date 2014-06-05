@@ -86,12 +86,3 @@ ChannelAdvisor.prototype.getClient = function (endpointName, cb) {
 	);
 }
 
-function generateMethodObject(prefix, methodNames) {
-	var methods = {};
-
-	methodNames.forEach(function (methodName) {
-		methods[methodName] =  prefix + '.' + methodName;
-	});
-
-	return methods;
-}
