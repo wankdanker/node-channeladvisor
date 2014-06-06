@@ -44,6 +44,8 @@ function ChannelAdvisor (options) {
                             err.lastRequest = client.lastRequest;
                             return cb(err, null);
                         }
+			
+			fn.lastRequest = client.lastRequest;
 
                         if (data && data[methodName + 'Result']) {
                             data = data[methodName + 'Result'];
