@@ -25,7 +25,7 @@ function ChannelAdvisor (options) {
                     args = null;
                 }
 
-                var client = self.getClient(endpointName, function (err, client) {
+                self.getClient(endpointName, function (err, client) {
                     var fn = deepVal(client, methodPath);
                     
                     if (!fn) {
@@ -40,6 +40,8 @@ function ChannelAdvisor (options) {
 
                     argArray.push(function (err, data) {
                         if (err) {
+                            //pass the client's lastRequest along with the err object
+                            err.lastRequest = client.lastRequest;
                             return cb(err, null);
                         }
 
