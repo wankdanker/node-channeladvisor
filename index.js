@@ -39,13 +39,13 @@ function ChannelAdvisor (options) {
                     }
 
                     argArray.push(function (err, data) {
+                        ep[methodName].lastRequest = client.lastRequest;
+
                         if (err) {
                             //pass the client's lastRequest along with the err object
                             err.lastRequest = client.lastRequest;
                             return cb(err, null);
                         }
-			
-			fn.lastRequest = client.lastRequest;
 
                         if (data && data[methodName + 'Result']) {
                             data = data[methodName + 'Result'];
