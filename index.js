@@ -8,6 +8,11 @@ ChannelAdvisor.endpoints = require('./endpoints.js');
 
 function ChannelAdvisor (options) {
     var self = this;
+
+    if (!(self instanceof ChannelAdvisor)) {
+        return new ChannelAdvisor(options);
+    }
+
     self.options = options;
     self.clientPool = {};
 
