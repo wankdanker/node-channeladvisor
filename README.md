@@ -11,9 +11,7 @@ example
 -------
 
 ```js
-var ChannelAdvisor = require('channeladvisor');
-
-var ca = new ChannelAdvisor({
+var ca = require('channeladvisor')({
   developerKey : process.env.CHANNEL_ADVISOR_DEV_KEY
   , password : process.env.CHANNEL_ADVISOR_DEV_PASSWORD
 });
