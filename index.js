@@ -44,18 +44,18 @@ function ChannelAdvisor (options) {
                     }
 
                     argArray.push(function (err, data) {
- 			ep[methodName].lastRequest = client.lastRequest;
-			ep[methodName].lastRequestHeaders = client.lastRequestHeaders;
-			ep[methodName].lastRequestLocation = client.lastRequestLocation;
-			ep[methodName].lastResponse = client.lastResponse;
-			ep[methodName].lastResponseHeaders = client.lastResponseHeaders;
+                        ep[methodName].lastRequest = client.lastRequest;
+                        ep[methodName].lastRequestHeaders = client.lastRequestHeaders;
+                        ep[methodName].lastRequestLocation = client.lastRequestLocation;
+                        ep[methodName].lastResponse = client.lastResponse;
+                        ep[methodName].lastResponseHeaders = client.lastResponseHeaders;
 
-			if (err) {
+                        if (err) {
                             //pass the client's lastRequest along with the err object
                             err.lastRequest = client.lastRequest;
                             return cb(err, null);
                         }
-			
+            
 
                         if (data && data[methodName + 'Result']) {
                             data = data[methodName + 'Result'];
@@ -92,7 +92,7 @@ ChannelAdvisor.prototype.getClient = function (endpointName, cb) {
                     DeveloperKey : self.options.developerKey
                     , Password : self.options.password
                 }
-            }, '', 'tns');
+            }, '', 'tns', 'http://api.channeladvisor.com/webservices/');
 
             return cb(err, client);
         }
