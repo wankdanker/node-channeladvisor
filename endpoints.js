@@ -64,6 +64,7 @@ module.exports = {
                 , 'DoesSkuExistList'
                 , 'GetClassificationConfigurationInformation'
                 , 'GetDistributionCenterList'
+                , 'GetInventoryItemListWithFullDetail'
                 , 'GetFilteredInventoryItemList'
                 , 'GetFilteredSkuList'
                 , 'GetInventoryItemAttributeList'
@@ -155,5 +156,3 @@ module.exports = {
         )
     }
 };
-
-
